@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet , Text , TouchableOpacity} from 'react-native';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const TextButton = ({title,onPress,style}) => {
     return (
@@ -12,7 +13,7 @@ const TextButton = ({title,onPress,style}) => {
     const styles = StyleSheet.create({
         container:{
             padding:30,
-            width:'100%',
+            width:wp(100),
             // backgroundColor:"purple",
             alignItems:'center',
             justifyContent:'center',

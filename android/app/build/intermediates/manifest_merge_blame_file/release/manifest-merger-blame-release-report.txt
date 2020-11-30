@@ -56,6 +56,21 @@
 33        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
 33-->/home/wifonic/ReactStructure/android/app/src/main/AndroidManifest.xml:24:7-84
 33-->/home/wifonic/ReactStructure/android/app/src/main/AndroidManifest.xml:24:17-81
-34    </application>
-35
-36</manifest>
+34        <activity
+34-->[com.google.android.gms:play-services-base:17.0.0] /home/wifonic/.gradle/caches/transforms-2/files-2.1/fc8046cb9a5df9499609a5f7f8270b1b/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+35            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+35-->[com.google.android.gms:play-services-base:17.0.0] /home/wifonic/.gradle/caches/transforms-2/files-2.1/fc8046cb9a5df9499609a5f7f8270b1b/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+36            android:exported="false"
+36-->[com.google.android.gms:play-services-base:17.0.0] /home/wifonic/.gradle/caches/transforms-2/files-2.1/fc8046cb9a5df9499609a5f7f8270b1b/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+37            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+37-->[com.google.android.gms:play-services-base:17.0.0] /home/wifonic/.gradle/caches/transforms-2/files-2.1/fc8046cb9a5df9499609a5f7f8270b1b/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+38
+39        <meta-data
+39-->[com.google.android.gms:play-services-basement:17.0.0] /home/wifonic/.gradle/caches/transforms-2/files-2.1/f5006dfe4ffd4ac8406479856ffde766/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+40            android:name="com.google.android.gms.version"
+40-->[com.google.android.gms:play-services-basement:17.0.0] /home/wifonic/.gradle/caches/transforms-2/files-2.1/f5006dfe4ffd4ac8406479856ffde766/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+41            android:value="@integer/google_play_services_version" />
+41-->[com.google.android.gms:play-services-basement:17.0.0] /home/wifonic/.gradle/caches/transforms-2/files-2.1/f5006dfe4ffd4ac8406479856ffde766/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+42    </application>
+43
+44</manifest>

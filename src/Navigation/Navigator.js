@@ -12,7 +12,7 @@ import createAppStack from './TabNavigator.js';
 import AddProduct from '../screens/AddProducts.js';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
 
-var isSignedIn = true;
+var isSignedIn = false;
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 

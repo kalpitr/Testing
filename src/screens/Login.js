@@ -15,6 +15,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+
 import Heading from '../components/Heading';
 import Input from '../components/Input';
 
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 50,
-    padding: 20,
+    // padding: 20,
     alignItems: 'center',
     // justifyContent:"center",
   },

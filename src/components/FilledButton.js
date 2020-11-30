@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet , Text , TouchableOpacity} from 'react-native';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const FilledButton = ({title,onPress,style}) => {
     return (
@@ -13,7 +14,7 @@ const FilledButton = ({title,onPress,style}) => {
         container:{
             color:"white",
             padding:14,
-            width:'100%',
+            width:wp(90),
             backgroundColor:"purple",
             alignItems:'center',
             justifyContent:'center',
