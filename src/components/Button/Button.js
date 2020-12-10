@@ -3,7 +3,7 @@ import { View,Text,StyleSheet,TouchableOpacity } from 'react-native';
 import {btnSize,btnColor} from  '../../theme/ButtonTheme'
 const Button = ({children,onPress,style,size,variant}) => {
     return (
-        <TouchableOpacity style={[styles[size,variant],style]} onPress={onPress}>
+        <TouchableOpacity style={[styles[variant,size],style]} onPress={onPress}>
             <Text style={[styles.text,style]}>{children}</Text>
         </TouchableOpacity>
     )
@@ -16,7 +16,6 @@ const baseContainer = {
     justifyContent:'center',
     backgroundColor:"purple",
     borderRadius:5, 
-    // width:200
 }
 
 const styles  = StyleSheet.create({

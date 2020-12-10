@@ -1,44 +1,18 @@
 import * as React from 'react';
 import {Text, View} from 'react-native';
+import AddProduct from '../screens/AddProducts.js';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {
-  HomeScreen,
-  OrderScreen,
-  ProfileScreen,
-  AddProduct,
-  AllProduct,
-  DeleteProduct,
-  
-} from '../screens';
-//import {AddProducts,AddCategory} from '../screens/Products/components';
-
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import LoginScreen from '../screens/Login.js';
+import ProfileScreen from '../screens/ProfileScreen.js';
+import ProductScreen from '../screens/ProductScreen.js';
+import HomeScreen from '../screens/HomeScreen.js';
+import OrderScreen from '../screens/OrderScreen.js';
 
 // import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 // import Heading from '../components/Heading.js'
 const Tab = createBottomTabNavigator();
-const Top = createMaterialTopTabNavigator();
-function ProductCategoriesScreen() {
-  return (
-    <Top.Navigator
-      tabBarOptions={{
-        labelStyle: {fontSize: 14,textTransform: 'none' },
-        activeTintColor:'white',
-        inactiveTintColor:'#D3D3D3',
-        indicatorStyle:{backgroundColor:"white"},
-        // tabStyle: { width: 100 },
-        style: {backgroundColor: '#428bca',
-},
-      }}>
-      <Top.Screen name="All Product" component={AllProduct} />
-      <Top.Screen name="Add " component={AddProduct} />
-      <Top.Screen name="Deleted " component={DeleteProduct} />
 
-      {/* <Tab.Screen name="Messages" component={Messages} /> */}
-    </Top.Navigator>
-  );
-}
 const createAppStack = () => {
   return (
     <Tab.Navigator>
@@ -69,12 +43,12 @@ const createAppStack = () => {
               size={size}
             />
           ),
-          // tabBarBadge: 1,
+          tabBarBadge: 1,
         }}
       />
       <Tab.Screen
         name="Products"
-        component={ProductCategoriesScreen}
+        component={ProductScreen}
         options={{
           tabBarLabel: 'Products',
           tabBarIcon: ({color, size}) => (
@@ -84,7 +58,7 @@ const createAppStack = () => {
               size={size}
             />
           ),
-          // tabBarBadge: 1,
+          tabBarBadge: 1,
         }}
       />
       <Tab.Screen

@@ -13,7 +13,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-// import LoginScreen from './screens/Login';
+import LoginScreen from './screens/Login';
 import Navigator from './Navigation/Navigator'
 
 const App = () => {
