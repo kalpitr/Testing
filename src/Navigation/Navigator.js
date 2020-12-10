@@ -27,6 +27,7 @@ function getHeaderTitle(route) {
     case 'Orders':
       return 'Orders';
     case 'Products':
+      
       return 'Products';
     case 'Profile':
       return 'My profile';
