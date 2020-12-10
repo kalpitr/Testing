@@ -1,8 +1,7 @@
-import Input from "./Input";
-
-export  {default as FilledButton} from './FilledButton.js'
-export  {default as Heading} from './Heading.js'
-export  {default as Input} from './Input.js'
-export  {default as TextButton} from './TextButton.js'
 export  {default as Button} from './Button'
+export  {default as FilledButton} from './FilledButton'
+export  {default as Heading} from './Heading'
+export  {default as Input} from './Input'
+export  {default as CustomText} from './CustomText'
+export  {default as TextButton} from './TextButton'
 

@@ -2,17 +2,16 @@ import * as React from 'react';
 import {Text, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import LoginScreen from '../screens/Login.js';
-import SignUpScreen from '../screens/SignUp.js';
+import {SignInScreen,SignUpScreen} from '../screens/';
+
 import {createStackNavigator} from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Heading from '../components/Heading.js';
+import {Heading} from '../components'
 import createAppStack from './TabNavigator.js';
-import AddProduct from '../screens/AddProducts.js';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
 
-var isSignedIn = false;
+var isSignedIn = true;
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -32,26 +31,30 @@ function getHeaderTitle(route) {
       return 'My profile';
   }
 }
+
+
 const Navigator = () => {
   return (
     <NavigationContainer>
       {isSignedIn ? (
-        <Stack.Navigator>
+        <Stack.Navigator tabBarOption={{
+        }}>
           <Stack.Screen
             name="Home"
-            component={createAppStack}
-            options={({route}) => ({
+            component={createAppStack} 
+            options={({route}) => ({          
               headerTitle: getHeaderTitle(route),
-              headerShown: true,
+              headerStyle:{backgroundColor:"#428bca", elevation:0 },
+              headerTitleStyle: { color:"white",alignSelf:"center"},
               tabBarIcon: ({color, size}) => (
-                <MaterialCommunityIcons name="home" color={color} size={size} />
+                <MaterialCommunityIcons name="home" color="red" size={size} />
               ),
             })}
           />
 
-          <Stack.Screen
-            name="AddProduct"
-            component={AddProduct}
+          {/* <Stack.Screen
+            name="AddProducts"
+            component={AddProducts}
             options={{
               headerTitle: <Heading>Add Product</Heading>,
               headerShown: true,
@@ -59,13 +62,13 @@ const Navigator = () => {
                 <MaterialCommunityIcons name="home" color={color} size={size} />
               ),
             }}
-          />
+          /> */}
         </Stack.Navigator>
       ) : (
         <Tab.Navigator>
           <Tab.Screen
-            name="LoginScreen"
-            component={LoginScreen}
+            name="SignInScreen"
+            component={SignInScreen}
             options={{
               tabBarVisible: false,
             }}

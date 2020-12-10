@@ -1,4 +1,4 @@
-#Mon Nov 30 10:48:17 IST 2020
+#Sat Dec 05 15:11:14 IST 2020
 base.0=/home/wifonic/ReactStructure/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
