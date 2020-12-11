@@ -2,17 +2,15 @@ import * as React from 'react';
 import {Text, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import LoginScreen from '../screens/Login.js';
-import SignUpScreen from '../screens/SignUp.js';
+import {SignInScreen, SignUpScreen, AddProductScreen} from '../screens/';
 import {createStackNavigator} from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Heading from '../components/Heading.js';
+import Heading from '../components/';
 import createAppStack from './TabNavigator.js';
-import AddProduct from '../screens/AddProducts.js';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
 
-var isSignedIn = false;
+var isSignedIn = true;
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -27,12 +25,12 @@ function getHeaderTitle(route) {
     case 'Orders':
       return 'Orders';
     case 'Products':
-      
       return 'Products';
     case 'Profile':
       return 'My profile';
   }
 }
+
 const Navigator = () => {
   return (
     <NavigationContainer>
@@ -43,6 +41,16 @@ const Navigator = () => {
             component={createAppStack}
             options={({route}) => ({
               headerTitle: getHeaderTitle(route),
+              headerStyle: {
+                backgroundColor: '#428bca',
+                elevation: 0,
+              },
+              headerTintColor: '#fff',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+                fontSize:18,
+                alignSelf:"center"
+              },
               headerShown: true,
               tabBarIcon: ({color, size}) => (
                 <MaterialCommunityIcons name="home" color={color} size={size} />
@@ -52,7 +60,7 @@ const Navigator = () => {
 
           <Stack.Screen
             name="AddProduct"
-            component={AddProduct}
+            component={AddProductScreen}
             options={{
               headerTitle: <Heading>Add Product</Heading>,
               headerShown: true,
@@ -66,7 +74,7 @@ const Navigator = () => {
         <Tab.Navigator>
           <Tab.Screen
             name="LoginScreen"
-            component={LoginScreen}
+            component={SignInScreen}
             options={{
               tabBarVisible: false,
             }}
